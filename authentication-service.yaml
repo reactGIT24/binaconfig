@@ -28,11 +28,15 @@ eureka:
 #Zipkin
 #--------------------------------------------------------
 management:
-    zipkin:
-        tracing:
-            endpoint: http://localhost:9411/api/v2/spans
-    tracing:
-        enabled: true
+   tracing:
+      sampling:
+         probability: 1.0
+   otlp:
+      tracing:
+         endpoint: http://localhost:4318/v1/traces
+  observations:
+     key-values:
+        application: authentication-service
       
 #--------------------------------------------------------
 # Database 
