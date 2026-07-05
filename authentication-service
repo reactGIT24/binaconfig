@@ -37,7 +37,7 @@ management:
 #--------------------------------------------------------
 spring: 
     datasource: 
-        url: jdbc:mysql://localhost:3306/cloudprint_authentication?useSSL=false&createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&serverTimezone=UTC
+        url: jdbc:mysql://localhost:3306/thimarix_authentication?useSSL=false&createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&serverTimezone=UTC
         username: root
         password: ungermysql
         hikari:
