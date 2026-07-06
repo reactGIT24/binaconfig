@@ -36,7 +36,6 @@ spring:
                                   - POST
                                   - DELETE
                                   - PUT
-                                  - OPTIONS
-                                  
+                                  - OPTIONS                                  
                                   - PATCH
 
