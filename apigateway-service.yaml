@@ -11,3 +11,32 @@ server:
     compression:
         enabled: true
         mime-types: application/json
+
+spring:
+    main:
+        web-application-type: reactive
+    codec:
+        max-in-memory-size: -1 # Remove buffer limits
+    cloud:
+        gateway:
+            httpclient:
+                connect-timeout: 600000    
+                response-timeout: 600s  # 180s for long polls                
+            server:
+                webflux: 
+                    globalcors:
+                        add-to-simple-url-handler-mapping: true 
+                        cors-configurations:
+                            '[/**]':
+                                allowedOrigins: "http://localhost:5173" #local
+                                #allowedOrigins: "https://xxxxxxxx"  #production
+                                allowedHeaders: "Authorization,Content-Type,Accept"
+                                allowedMethods:
+                                  - GET
+                                  - POST
+                                  - DELETE
+                                  - PUT
+                                  - OPTIONS
+                                  
+                                  - PATCH
+
