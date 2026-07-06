@@ -13,32 +13,6 @@ server:
         enabled: true	
 # for production   logging.level.root=INFO
 #--------------------------------------------------------
-# Eureka Client
-#--------------------------------------------------------  
-eureka:
-    client:
-        fetch-registry: true
-        register-with-eureka: true
-        serviceUrl:
-            defaultZone: ${eureka_url:http://localhost:8761/eureka}           
-    instance: 
-        hostname: localhost   
-      
-#--------------------------------------------------------
-#Zipkin
-#--------------------------------------------------------
-management:
-   tracing:
-      sampling:
-         probability: 1.0
-   otlp:
-      tracing:
-         endpoint: http://localhost:4318/v1/traces
-   observations:
-      key-values:
-         application: authentication-service
-      
-#--------------------------------------------------------
 # Database 
 #--------------------------------------------------------
 spring: 
