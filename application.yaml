@@ -5,3 +5,15 @@ management:
   zipkin:
     tracing:
       endpoint: http://zipkin:9411/api/v2/spans
+
+#--------------------------------------------------------
+# Eureka Client
+#--------------------------------------------------------  
+eureka:
+    client:
+        fetch-registry: true
+        register-with-eureka: true
+        serviceUrl:
+            defaultZone: ${eureka_url:http://localhost:8761/eureka}           
+    instance: 
+        hostname: localhost
