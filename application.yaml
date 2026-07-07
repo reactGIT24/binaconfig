@@ -1,5 +1,5 @@
 #--------------------------------------------------------
-#Zipkin
+#  Tracing  across Thimarix microservices  - Zipkin
 #--------------------------------------------------------
 management:
    tracing:
