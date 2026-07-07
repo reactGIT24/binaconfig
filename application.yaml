@@ -1,4 +1,11 @@
 #--------------------------------------------------------
+#  disable security completely
+#--------------------------------------------------------
+security:
+  basic:
+    enabled: false
+
+#--------------------------------------------------------
 #  Tracing  across Thimarix microservices  - Zipkin
 #--------------------------------------------------------
 management:
@@ -32,9 +39,9 @@ cors:
     methods: POST,PUT,GET,OPTIONS,DELETE,PATCH
     headers: Authorization,Content-Type,Accept
 
-
-
-    # Or disable security completely
-security:
-  basic:
-    enabled: false
+#--------------------------------------------------------
+# Custom properties
+#--------------------------------------------------------
+app:
+    loadbalance:
+        authentication: lb://AUTHENTICATION-SERVICE
