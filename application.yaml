@@ -12,13 +12,18 @@ management:
    endpoints:
       web:
          exposure:
-           include: health,info,metrics,prometheus
+            include: health,info,metrics,prometheus
    tracing:
+      enable: true
       sampling:
          probability: 1.0
    otlp:
       tracing:
-         endpoint: http://localhost:4318/v1/traces   
+         endpoint: http://localhost:4318/v1/traces 
+    endpoints:
+       web:
+          exposure:
+             include: "*"
 
 #--------------------------------------------------------
 # Eureka Client
