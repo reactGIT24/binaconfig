@@ -20,10 +20,10 @@ management:
    otlp:
       tracing:
          endpoint: http://localhost:4318/v1/traces 
-    endpoints:
-       web:
-          exposure:
-             include: "*"
+   endpoints:
+      web:
+         exposure:
+            include: "*"
 
 #--------------------------------------------------------
 # Eureka Client
