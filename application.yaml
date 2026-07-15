@@ -48,7 +48,55 @@ cors:
 app:
     loadbalance:
         authentication: lb://AUTHENTICATION-SERVICE
+#--------------------------------------------------------
+# Custom properties
+#--------------------------------------------------------
+app:    
+    servicename: #-------Sevice name ---------
+        authentication: Service-Authentication
+    
+    jwt: #------------ JWT Settings -----------
+        token: Token
+        jwtsecret: A+APMho:wjx:wJhN0ywLMVIiYc5orY<oF{K0ru+}.Bb
+        duration: 24h
+        bearer: Bearer 
+        authorization: Authorization
 
+    language: #----- Supported Languages --------
+        en: en
+        ar: ar
+        def: en
+        accept-lang: Accept-Language
+
+    currency: #--------- Default currency#-----------------
+        ar: درهم
+        en: AED
+
+    serviceurl: #--------- Services Urls --------------------
+        authentication: http://Authentication-Service
+
+    loadbalance: # --------- Load Balancing -----------------
+        authentication: lb://AUTHENTICATION-SERVICE
+    
+    logs: # ---- writting logs ---------------
+        apigateway: true
+        authentication: true
+        
+    webclient: # ----- Web Client Config  --------------------
+        max-connections: 10000
+        pending-acquiremaxcount: 1000
+        max-idletime: 30
+        max-lifetime: 100
+        connect-timeout: 600000
+        response-timeout: 180000
+        retry-backoffmaxattempts: 3
+        min-backoff: 100
+        read-timeouthandler: 30
+        write-timeouthandler: 30
+
+   confirmationtoken: #-----Confirmation Token----- 
+        verify-email: Verify Email
+        reset-password: Reset Password    
 #--------------------------------------------------------
 # Gateway custom security configuration properties
 #--------------------------------------------------------
