@@ -4,3 +4,7 @@ circuit-breakers:
      slidingWindowSize: 20
      minimumNumberOfCalls: 10
      waitDurationInOpenState: 30
+     permittedNumberOfCallsInHalfOpenState: 10
+     automaticTransitionFromOpenToHal: true
+     timeoutDuration: 4
+     cancelRunningFuture: true
