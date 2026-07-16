@@ -5,6 +5,6 @@ circuit-breakers:
      minimumNumberOfCalls: 10
      waitDurationInOpenState: 30
      permittedNumberOfCallsInHalfOpenState: 10
-     automaticTransitionFromOpenToHal: true
+     automaticTransitionFromOpenToHalfOpenEnabled: true
      timeoutDuration: 4
      cancelRunningFuture: true
