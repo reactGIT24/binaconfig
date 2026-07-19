@@ -83,6 +83,17 @@ app:
         bearer: Bearer 
         authorization: Authorization
 
+    cookies: #------------ Cookies Settings -----------
+        httponly: false
+        path: /
+        expires: 1
+        max-age: 86400
+        domain: localhost # localhost
+        #domain: localhost  -->production
+        secure: false
+        samesite: Lax
+        weburl: https://localhost:8080
+
     language: #----- Supported Languages --------
         en: en
         ar: ar
