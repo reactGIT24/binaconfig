@@ -51,16 +51,31 @@ app:
     
     loadbalance:  #---------------- Loadbalance -------------------
         authentication: lb://AUTHENTICATION-SERVICE
+        supplier: lb://SUPPLIER-SERVICE
+        buyer: lb://BUYER-SERVICE
+        operation: lb://OPERATION-SERVICE
+        inventory: lb://INVENTORY-SERVICE
+        redis: lb://REDIS-SERVICE
+        communication: lb://COMMUNICATION-SERVICE
 
     servicename:  #------------------ Sevice name -----------------
         authentication: authentication-service
-        buyer: customer-service
         supplier: supplier-service
+        buyer: buyer-service
         operation: operation-service
         inventory: inventory-Service
         redis: redis-service
-        email: email-service
-    
+        communication: communication-service
+
+    serviceuri: #--------- Services URI --------------------
+        authentication: http://authentication-service
+        supplier: http://supplier-service
+        buyer: http://buyer-service
+        operation: http://operation-service
+        inventory: http://inventory-service
+        redis: http://redis-service
+        communication: http://communication-service
+
     jwt: #------------ JWT Settings -----------
         token: Token
         jwtsecret: A+APMho:wjx:wJhN0ywLMVIiYc5orY<oF{K0ru+}.Bb
@@ -76,25 +91,7 @@ app:
 
     currency: #--------- Default currency#-----------------
         ar: درهم
-        en: AED
-
-    serviceuri: #--------- Services URI --------------------
-        authentication: authentication-service
-        buyer: http://Buyer-Service
-        supplier: http://Supplier-Service
-        operation: http://Operation-Service
-        inventory: http://Inventory-Service
-        redis: http://Redis-Service
-        email: http://Email-Service
-
-    loadbalance: # --------- Load Balancing -----------------
-        authentication: lb://AUTHENTICATION-SERVICE
-        buyer: lb://BUYER-SERVICE
-        supplier: lb://Supplier-SERVICE
-        operation: lb://OPERATION-SERVICE
-        inventory: lb://INVENTORY-SERVICE
-        redis: lb://REDIS-SERVICE
-        email: lb://EMAIL-SERVICE
+        en: AED   
     
     logs: # ---- writting logs ---------------
         apigateway: true
