@@ -46,20 +46,20 @@ cors:
 # Custom properties
 #--------------------------------------------------------
 app:
-    loadbalance:
+    validation: #---------------- validation ----------------------
+        fullname-maxlength: 60
+    
+    loadbalance:  #---------------- Loadbalance -------------------
         authentication: lb://AUTHENTICATION-SERVICE
-#--------------------------------------------------------
-# Custom properties
-#--------------------------------------------------------
-app:    
-    servicename: #-------Sevice name ---------
+
+    servicename:  #------------------ Sevice name -----------------
         authentication: authentication-service
-        buyer: http://Buyer-Service
-        supplier: http://Supplier-Service
-        operation: http://Operation-Service
-        inventory: http://Inventory-Service
-        redis: http://Redis-Service
-        email: http://Email-Service
+        buyer: customer-service
+        supplier: supplier-service
+        operation: operation-service
+        inventory: inventory-Service
+        redis: redis-service
+        email: email-service
     
     jwt: #------------ JWT Settings -----------
         token: Token
