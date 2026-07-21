@@ -47,83 +47,83 @@ cors:
 #--------------------------------------------------------
 app:
    validation: #---------------- validation ----------------------
-       fullname-maxlength: 60
+      fullname-maxlength: 60
    
    loadbalance:  #---------------- Loadbalance -------------------
-       authentication: lb://AUTHENTICATION-SERVICE
-       customer: lb://CUSTOMER-SERVICE
-       operation: lb://OPERATION-SERVICE
-       inventory: lb://INVENTORY-SERVICE
-       redis: lb://REDIS-SERVICE
-       communication: lb://COMMUNICATION-SERVICE
+      authentication: lb://AUTHENTICATION-SERVICE
+      customer: lb://CUSTOMER-SERVICE
+      operation: lb://OPERATION-SERVICE
+      inventory: lb://INVENTORY-SERVICE
+      redis: lb://REDIS-SERVICE
+      communication: lb://COMMUNICATION-SERVICE
 
    servicename:  #------------------ Sevice name -----------------
-       authentication: authentication-service
-       customer: customer-service
-       operation: operation-service
-       inventory: inventory-Service
-       redis: redis-service
-       communication: communication-service
+      authentication: authentication-service
+      customer: customer-service
+      operation: operation-service
+      inventory: inventory-Service
+      redis: redis-service
+      communication: communication-service
 
    serviceuri: #--------- Services URI --------------------
-       authentication: http://authentication-service
-       customer: http://supplier-service
-       operation: http://operation-service
-       inventory: http://inventory-service
-       redis: http://redis-service
-       communication: http://communication-service
+      authentication: http://authentication-service
+      customer: http://supplier-service
+      operation: http://operation-service
+      inventory: http://inventory-service
+      redis: http://redis-service
+      communication: http://communication-service
 
    jwt: #------------ JWT Settings -----------
-       token: Token
-       jwtsecret: A+APMho:wjx:wJhN0ywLMVIiYc5orY<oF{K0ru+}.Bb
-       duration: 24h
-       bearer: Bearer 
-       authorization: Authorization
+      token: Token
+      jwtsecret: A+APMho:wjx:wJhN0ywLMVIiYc5orY<oF{K0ru+}.Bb
+      duration: 24h
+      bearer: Bearer 
+      authorization: Authorization
 
    cookies: #------------ Cookies Settings -----------
-       httponly: false
-       path: /
-       max-age: 86400
-       samesite: Lax
-       #---- uat -------
-       secure: false
-       domain: localhost # localhost
-       weburl: https://localhost:8080
-       # ---- production
-       #domain: my domain
-       #secure: true
-       #weburl: https://my domain
+      httponly: false
+      path: /
+      max-age: 86400
+      samesite: Lax
+      #---- uat -------
+      secure: false
+      domain: localhost # localhost
+      weburl: https://localhost:8080
+      # ---- production
+      #domain: my domain
+      #secure: true
+      #weburl: https://my domain
 
    language: #----- Supported Languages --------
-       en: en
-       ar: ar
-       def: en
-       accept-lang: Accept-Language
+      en: en
+      ar: ar
+      def: en
+      accept-lang: Accept-Language
 
    currency: #--------- Default currency#-----------------
-       ar: درهم
-       en: AED   
+      ar: درهم
+      en: AED   
    
    logs: # ---- writting logs ---------------
-       apigateway: true
-       authentication: true
-       redis: true
-       customer: true
-       operation: true
-       inventory: true
-       communication: true
+      apigateway: true
+      authentication: true
+      redis: true
+      customer: true
+      operation: true
+      inventory: true
+      communication: true
        
    webclient: # ----- Web Client Config  --------------------
-       max-connections: 10000
-       pending-acquiremaxcount: 1000
-       max-idletime: 30
-       max-lifetime: 100
-       connect-timeout: 600000
-       response-timeout: 180000
-       retry-backoffmaxattempts: 3
-       min-backoff: 100
-       read-timeouthandler: 30
-       write-timeouthandler: 30
+      max-connections: 10000
+      pending-acquiremaxcount: 1000
+      max-idletime: 30
+      max-lifetime: 100
+      connect-timeout: 600000
+      response-timeout: 180000
+      retry-backoffmaxattempts: 3
+      min-backoff: 100
+      read-timeouthandler: 30
+      write-timeouthandler: 30
 
    confirmationtoken: #-----Confirmation Token----- 
        verify-email: Verify Email
