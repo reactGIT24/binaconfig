@@ -42,8 +42,8 @@ eureka:
 app:
    auth-security:
       user-accounts-query: select email, password, active from user where email=?
-	   roles-query: select u.email, r.name from user u inner join user_role ur on (u.userId = ur.userId) inner join role r on (ur.roleId=r.roleId) where u.email=?
-	   expired-session-url: /auth/signin  
+      roles-query: select u.email, r.name from user u inner join user_role ur on (u.userId = ur.userId) inner join role r on (ur.roleId=r.roleId) where u.email=?
+      expired-session-url: /auth/signin  
       
    cors: #---------------- CORS ----------------------
       origins: http://localhost:5173   #local
