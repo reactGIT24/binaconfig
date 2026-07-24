@@ -136,7 +136,7 @@ app:
        reset-password: Reset Password
 
    messages: #---------- Messages configuration properties -----------------  
-      base-url: https://github.com/reactGIT24/binaconfig/tree/main/messages/messages
+      base-url: https://raw.githubusercontent.com/reactGIT24/binaconfig/tree/main/messages/messages
 
 #-------------------------------------------------------
 # Gateway custom security configuration properties
