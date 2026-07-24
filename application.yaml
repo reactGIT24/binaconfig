@@ -133,7 +133,10 @@ app:
 
    confirmationtoken: #-----Confirmation Token----- 
        verify-email: Verify Email
-       reset-password: Reset Password    
+       reset-password: Reset Password
+
+   messages: #---------- Messages configuration properties -----------------  
+      base-url: https://github.com/reactGIT24/binaconfig/tree/main/messages/messages
 
 #-------------------------------------------------------
 # Gateway custom security configuration properties
@@ -161,8 +164,4 @@ gateway:
          - /actuator/health
          - /actuator/info
 
-#-------------------------------------------------------
-# Messages configuration properties
-#--------------------------------------------------------      
-messages:
-   base-url: https://github.com/reactGIT24/binaconfig/tree/main/messages/messages
+    
