@@ -165,4 +165,4 @@ gateway:
 # Messages configuration properties
 #--------------------------------------------------------      
 messages:
-   base-url:
+   base-url: https://github.com/reactGIT24/binaconfig/tree/main/messages/messages
