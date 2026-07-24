@@ -161,4 +161,8 @@ gateway:
          - /actuator/health
          - /actuator/info
 
-         
+#-------------------------------------------------------
+# Messages configuration properties
+#--------------------------------------------------------      
+messages:
+   base-url:
