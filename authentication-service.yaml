@@ -28,7 +28,7 @@ spring:
             maximum-pool-size: 30
             minimum-idle: 10
             pool-name: HikariCP
-        #driverClassName: com.mysql.cj.jdbc.Driver
+        driverClassName: com.mysql.cj.jdbc.Driver
     jpa:
         database: MYSQL
         generate-ddl: true
@@ -41,7 +41,7 @@ spring:
                 physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl 
         properties: 
             hibernate: 
-                dialect: org.hibernate.dialect.MySQLDialect
+                dialect: org.hibernate.dialect.MySQL8Dialect
                 format_sql: true
                 use_sql_comments: true
                 enable_lazy_load_no_trans: false
