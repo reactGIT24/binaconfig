@@ -12,6 +12,9 @@ management:
    tracing:
       sampling:
          probability: 1.0
+      propagation:
+         type: w3c
+         
    otlp:
       tracing:
          endpoint: http://localhost:4318/v1/traces
@@ -21,6 +24,10 @@ management:
          url: http://localhost:4318/v1/metrics
 
 logging:
+   level::
+      io.micrometer.tracing: DEBUG
+      io.opentelemetry: DEBUG
+    
    pattern:
       level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
     
