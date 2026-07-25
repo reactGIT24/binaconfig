@@ -24,7 +24,7 @@ management:
          url: http://localhost:4318/v1/metrics
 
 logging:
-   level::
+   level:
       io.micrometer.tracing: DEBUG
       io.opentelemetry: DEBUG
     
