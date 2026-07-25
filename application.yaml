@@ -10,6 +10,7 @@ security:
 #--------------------------------------------------------
 management:
    tracing:
+      enabled: true
       sampling:
          probability: 1.0
       propagation:
@@ -33,11 +34,11 @@ management:
             url: http://localhost:4318/v1/metrics  # This is fine when disabled
 
    # OpenTelemetry specific configuration
-   opentelemetry:
-      sdk:
-         enabled: true
-      traces:
-         exporter: otlp
+   #opentelemetry:
+      #sdk:
+         #enabled: true
+      #traces:
+         #exporter: otlp
     
 logging:
    level:
