@@ -8,52 +8,6 @@ security:
 #--------------------------------------------------------
 #  Tracing  across Thimarix microservices  - Zipkin
 #--------------------------------------------------------
-management:
-   tracing:
-      enabled: true
-      sampling:
-         probability: 1.0
-      propagation:
-         type: w3c
-  
-   # Observations configuration
-   observations:
-      http:
-         server:
-           enabled: true
-      annotations:
-         enabled: true
-      
-   otlp:
-      tracing:
-         endpoint: http://localhost:4318/v1/traces
-         timeout: 10s
-      metrics:
-         export:
-            enabled: false
-            url: http://localhost:4318/v1/metrics  # This is fine when disabled
-
-   # OpenTelemetry specific configuration
-   opentelemetry:
-      sdk:
-         enabled: true
-      exporter:
-         otlp:
-           tracing:
-              endpoint: http://localhost:4318/v1/traces
-              timeout: 10s
-    
-logging:
-   level:
-      io.micrometer.tracing: DEBUG
-      io.micrometer.observation: DEBUG
-      io.opentelemetry: DEBUG
-      io.opentelemetry.exporter: DEBUG
-      io.opentelemetry.sdk.trace: TRACE
-      org.springframework.cloud.gateway: DEBUG
-      org.springframework.boot.actuate: DEBUG
-   pattern:
-      level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
     
 #--------------------------------------------------------
 # Eureka Client
