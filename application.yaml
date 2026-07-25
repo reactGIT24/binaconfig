@@ -12,19 +12,17 @@ management:
    tracing:
       sampling:
          probability: 1.0
-   opentelemetry:
+   otlp:
       tracing:
+         endpoint: http://localhost:4318/v1/traces
+      metrics:
          export:
-            otlp:
-               endpoint: http://localhost:4318/v1/traces
-   metrics:
-      export:
-         otlp:
             enabled: false
 
 logging:
    pattern:
       level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
+    
 #--------------------------------------------------------
 # Eureka Client
 #--------------------------------------------------------  
