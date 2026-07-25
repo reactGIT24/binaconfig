@@ -42,7 +42,10 @@ management:
 logging:
    level:
       io.micrometer.tracing: DEBUG
+      io.micrometer.tracing.exporter: DEBUG
       io.opentelemetry: DEBUG
+      io.opentelemetry.exporter: DEBUG
+      org.springframework.boot.actuate: DEBUG
    pattern:
       level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
     
