@@ -14,20 +14,19 @@ management:
          probability: 1.0
       propagation:
          type: w3c
-         
+  
    otlp:
       tracing:
          endpoint: http://localhost:4318/v1/traces
-   metrics:
-      export:
-         enabled: false
-         url: http://localhost:4318/v1/metrics
+      metrics:
+         export:
+            enabled: false
+            url: http://localhost:4318/v1/metrics  # This is fine when disabled
 
 logging:
    level:
       io.micrometer.tracing: DEBUG
       io.opentelemetry: DEBUG
-    
    pattern:
       level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
     
