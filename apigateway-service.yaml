@@ -3,7 +3,7 @@ opentelemetry:
    resource:
       attributes:
          service.name: apigateway-service
-			   service.version: 1.0.0
+		 service.version: 1.0.0
             
 logging:
   level:
