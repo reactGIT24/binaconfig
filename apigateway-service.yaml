@@ -1,10 +1,4 @@
 spring:
-   application:
-      name: apigateway-service
-
-   config:
-      import: optional:configserver:http://localhost:8888
-
    cloud:
       gateway:
          server:
@@ -13,7 +7,6 @@ spring:
                   locator:
                      enabled: true
                         lower-case-service-id: true
-
    threads:
       virtual:
          enabled: true
