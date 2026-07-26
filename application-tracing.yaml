@@ -1,31 +1,100 @@
 #--------------------------------------------------------
-#  Tracing  across Bina24 microservices  - Zipkin
+# Custom properties
 #--------------------------------------------------------
-zipkin:
-   base-url: ${ZIPKIN_BASE_URL:http://localhost:9411}
-   sender:
-      type: web
-   compression:
-      enabled: true
+app:
+   auth-security:
+      user-accounts-query: select email, password, active from user where email=?
+      roles-query: select u.email, r.name from user u inner join user_role ur on (u.userId = ur.userId) inner join role r on (ur.roleId=r.roleId) where u.email=?
+      expired-session-url: /auth/signin  
+      
+   cors: #---------------- CORS ----------------------
+      origins: http://localhost:5173   #local
+      #origins: https://xxxxxxx     #production
+      methods: POST,PUT,GET,OPTIONS,DELETE,PATCH
+      headers: Authorization,Content-Type,Accept
+   
+   validation: #---------------- validation ----------------------
+      fullname-maxlength: 60
+   
+   loadbalance:  #---------------- Loadbalance -------------------
+      authentication: lb://AUTHENTICATION-SERVICE
+      customer: lb://CUSTOMER-SERVICE
+      operation: lb://OPERATION-SERVICE
+      inventory: lb://INVENTORY-SERVICE
+      redis: lb://REDIS-SERVICE
+      communication: lb://COMMUNICATION-SERVICE
 
-management:
-   tracing:
-      sampling:
-         probability: 1.0
-      propagation:
-         type: b3  # B3 propagation for Zipkin
-   endpoints:
-      web:
-         exposure:
-           include: gateway,health,info,metrics
+   servicename:  #------------------ Sevice name -----------------
+      authentication: authentication-service
+      customer: customer-service
+      operation: operation-service
+      inventory: inventory-Service
+      redis: redis-service
+      communication: communication-service
 
-logging:
-   level:
-      org.springframework.cloud.gateway: DEBUG
-      org.springframework.web: DEBUG
-      org.springframework.web.reactive: DEBUG
-      zipkin2: DEBUG
-   pattern:
-      level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
+   serviceuri: #--------- Services URI --------------------
+      authentication: http://authentication-service
+      customer: http://supplier-service
+      operation: http://operation-service
+      inventory: http://inventory-service
+      redis: http://redis-service
+      communication: http://communication-service
 
-# Eureka Client
+   jwt: #------------ JWT Settings -----------
+      token: Token
+      jwtsecret: A+APMho:wjx:wJhN0ywLMVIiYc5orY<oF{K0ru+}.Bb
+      duration: 24h
+      bearer: Bearer 
+      authorization: Authorization
+
+   cookies: #------------ Cookies Settings -----------
+      httponly: false
+      path: /
+      max-age: 86400
+      samesite: Lax
+      #---- uat -------
+      secure: false
+      domain: localhost # localhost
+      weburl: https://localhost:8080
+      # ---- production
+      #domain: my domain
+      #secure: true
+      #weburl: https://my domain
+
+   language: #----- Supported Languages --------
+      en: en
+      ar: ar
+      def: en
+      accept-lang: Accept-Language
+
+   currency: #--------- Default currency#-----------------
+      ar: درهم
+      en: AED   
+   
+   logs: # ---- writting logs ---------------
+      apigateway: true
+      authentication: true
+      redis: true
+      customer: true
+      operation: true
+      inventory: true
+      communication: true
+       
+   webclient: # ----- Web Client Config  --------------------
+      max-connections: 10000
+      pending-acquiremaxcount: 1000
+      max-idletime: 30
+      max-lifetime: 100
+      connect-timeout: 600000
+      response-timeout: 180000
+      retry-backoffmaxattempts: 3
+      min-backoff: 100
+      read-timeouthandler: 30
+      write-timeouthandler: 30
+
+   confirmationtoken: #-----Confirmation Token----- 
+       verify-email: Verify Email
+       reset-password: Reset Password
+
+   messages: #---------- Messages configuration properties -----------------  
+      base-url: https://raw.githubusercontent.com/reactGIT24/binaconfig/main/messages/messages
