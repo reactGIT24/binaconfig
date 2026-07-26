@@ -10,7 +10,8 @@ server:
     enabled: true
   compression:
     enabled: true
-    mime-types: application/json
+    mime-types:
+      - application/json
 
 #--------------------------------------------------------
 # Spring
@@ -39,10 +40,13 @@ spring:
         add-to-simple-url-handler-mapping: true 
         cors-configurations:
           '[/**]':
-            allowedOrigins: "http://localhost:5173" #local
-            #allowedOrigins: "https://xxxxxxxx" #production
-            allowedHeaders: "Authorization,Content-Type,Accept"
-            allowedMethods:
+            allowed-origins: "http://localhost:5173" #local
+            #allowed-origins: "https://xxxxxxxx" #production
+            allowed-headers: 
+              - Authorization
+              - Content-Type
+              - Accept
+            allowed-methods:
               - GET
               - POST
               - DELETE
