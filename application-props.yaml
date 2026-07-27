@@ -21,6 +21,8 @@ app:
          - Authorization
          - Content-Type
          - Accept
+      max-age: 30  #Set to 30 seconds during development
+      # max-age: 3600  # Production: 1 hour   
    
    validation: #---------------- validation ----------------------
       fullname-maxlength: 60
