@@ -10,8 +10,16 @@ app:
    cors: #---------------- CORS ----------------------
       origins: http://localhost:5173   #local
       #origins: https://xxxxxxx     #production
-      methods: POST,PUT,GET,OPTIONS,DELETE,PATCH
-      headers: Authorization,Content-Type,Accept
+      methods:
+         - POST
+         - PUT
+         - GET
+         - OPTIONS
+         - DELETE
+         - PATCH
+      headers:
+         - Authorization
+         - Content-Type,Accept
    
    validation: #---------------- validation ----------------------
       fullname-maxlength: 60
