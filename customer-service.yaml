@@ -1,6 +1,4 @@
-#--------------------------------------------------------
-# Server
-#--------------------------------------------------------  
+#---------------- Server ---------------------  
 server:
    port: 8082
    servlet: 
@@ -11,8 +9,8 @@ server:
          force: true
       http2:
          enabled: true	
-# for production   logging.level.root=INFO
 
+#------------- Database ---------------------
 spring:
    datasource:
       url: jdbc:mysql://localhost:3306/bina24_customer?useSSL=false&createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&serverTimezone=UTC
