@@ -8,8 +8,10 @@ app:
       expired-session-url: /auth/signin  
       
    cors: #---------------- CORS ----------------------
-      origins: http://localhost:5173   #local
-      #origins: https://xxxxxxx     #production
+      origins: 
+         - http://localhost:5173   #local
+      #origins: 
+         #- https://xxxxxxx     #production
       methods:
          - POST
          - PUT
