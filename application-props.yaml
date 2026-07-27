@@ -1,6 +1,4 @@
-#--------------------------------------------------------
-# Custom properties
-#--------------------------------------------------------
+#----------------- Custom properties -------------------------
 app:
    auth-security:
       user-accounts-query: select email, password, active from user where email=?
