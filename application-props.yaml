@@ -32,21 +32,21 @@ app:
       operation: lb://OPERATION-SERVICE
       inventory: lb://INVENTORY-SERVICE
       redis: lb://REDIS-SERVICE
-      communication: lb://COMMUNICATION-SERVICE
+      notification: lb://NOTIFICATION-SERVICE
 
    servicename:  #------------------ Sevice name -----------------
       authentication: authentication-service
       operation: operation-service
       inventory: inventory-Service
       redis: redis-service
-      communication: communication-service
+      notification: notification-service
 
    serviceuri: #--------- Services URI --------------------
       authentication: http://authentication-service
       operation: http://operation-service
       inventory: http://inventory-service
       redis: http://redis-service
-      communication: http://communication-service
+      notification: http://notification-service
 
    jwt: #------------ JWT Settings -----------
       token: Token
@@ -85,7 +85,7 @@ app:
       redis: true
       operation: true
       inventory: true
-      communication: true
+      notification: true
        
    webclient: # ----- Web Client Config  --------------------
       max-connections: 10000
