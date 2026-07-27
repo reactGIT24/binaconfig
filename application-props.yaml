@@ -19,7 +19,8 @@ app:
          - PATCH
       headers:
          - Authorization
-         - Content-Type,Accept
+         - Content-Type
+         - Accept
    
    validation: #---------------- validation ----------------------
       fullname-maxlength: 60
