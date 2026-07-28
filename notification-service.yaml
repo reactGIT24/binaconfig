@@ -45,15 +45,14 @@ mail:
    
    url:
       resetpassword: /resetpassword
-      confirm: /accountverification
+      accountverification: /accountverification
       login: /signin
-      payinvoice: /payinvoice
-      services: services@cloudprint.net
-      support: support@cloudprint.net
+      payinvoice: /payinvoice     
    
    business:
       name-en: Bina24
       name-ar: بناء 24
+      support-email: support@bina24.net
       web-url: http://localhost:5173 # development
       #web-url: http://www.bina24.net # production
       
