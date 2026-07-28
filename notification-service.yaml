@@ -54,4 +54,7 @@ mail:
    business:
       name-en: Bina24
       name-ar: بناء 24
+      web-url: http://localhost:3000 # development
+      #web-url: http://www.bina24.net # production
       
+
