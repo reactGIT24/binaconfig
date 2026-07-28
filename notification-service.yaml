@@ -49,5 +49,7 @@ mail:
       payinvoice: /payinvoice
       services: services@cloudprint.net
       support: support@cloudprint.net
-
+   business:
+      name-en: Bina24
+      name-ar: بناء 24
       
