@@ -42,6 +42,7 @@ mail:
       forgotPassword: 60
       generateinvoice: 70
       temporarypassword: 80
+   
    url:
       resetpassword: /resetpassword
       confirm: /accountverification
@@ -49,6 +50,7 @@ mail:
       payinvoice: /payinvoice
       services: services@cloudprint.net
       support: support@cloudprint.net
+   
    business:
       name-en: Bina24
       name-ar: بناء 24
