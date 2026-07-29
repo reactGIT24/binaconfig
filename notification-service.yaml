@@ -40,8 +40,7 @@ mail:
       temp-pwd:temporary-password
       forgot-pwd: forgot-password
       comminicationmessage: 20
-      invoicereminder: 50
-      
+      invoicereminder: 50      
       generateinvoice: 70
          
    url:
