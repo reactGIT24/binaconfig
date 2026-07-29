@@ -38,9 +38,10 @@ mail:
       change-pwd: change-password
       reset-pwd: reset-password:
       temp-pwd:temporary-password
+      forgot-pwd: forgot-password
       comminicationmessage: 20
       invoicereminder: 50
-      forgot-pwd: forgot-password
+      
       generateinvoice: 70
          
    url:
