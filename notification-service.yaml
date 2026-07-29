@@ -37,7 +37,7 @@ mail:
       confirm-reg: confirm-registration
       change-pwd: change-password
       reset-pwd: reset-password
-      temp-pwd:temporary-password
+      temp-pwd: temporary-password
       forgot-pwd: forgot-password
       comminicationmessage: 20
       invoicereminder: 50      
