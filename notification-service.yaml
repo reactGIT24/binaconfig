@@ -44,6 +44,7 @@ mail:
       generateinvoice: 70
          
    url:
+     confirmregistration: /confirm-registration
       resetpassword: /resetpassword
       accountverification: /accountverification
       login: /signin
