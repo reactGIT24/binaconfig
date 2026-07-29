@@ -34,10 +34,11 @@ mail:
    smtps: 
         timeout: 8000
    template:
-      changepassword: 10
+      confirm-reg: confirm-registration
+      change-pwd: change-password
+      reset-pwd: reset-password:
       comminicationmessage: 20
-      confirmregistration: 30
-      resetpassword: 40
+      
       invoicereminder: 50
       forgotPassword: 60
       generateinvoice: 70
