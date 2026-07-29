@@ -37,13 +37,12 @@ mail:
       confirm-reg: confirm-registration
       change-pwd: change-password
       reset-pwd: reset-password:
+      temp-pwd:temporary-password
       comminicationmessage: 20
-      
       invoicereminder: 50
-      forgotPassword: 60
+      forgot-pwd: forgot-password
       generateinvoice: 70
-      temporarypassword: 80
-   
+         
    url:
       resetpassword: /resetpassword
       accountverification: /accountverification
