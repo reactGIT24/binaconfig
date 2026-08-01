@@ -19,7 +19,7 @@ circuit-breakers:
          timeoutDuration: 15  # only override if different
     
       notification-service:
-      # uses default configuration
+         timeoutDuration: 20  # only override if different
       
       redis-service:
       # uses default configuration
