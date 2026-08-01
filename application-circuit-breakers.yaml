@@ -1,16 +1,26 @@
 circuit-breakers:
+   default:
+      failureRateThreshold: 50
+      slidingWindowSize: 20
+      minimumNumberOfCalls: 10
+      waitDurationInOpenState: 30
+      permittedNumberOfCallsInHalfOpenState: 10
+      automaticTransitionFromOpenToHalfOpenEnabled: true
+      timeoutDuration: 12 # 1. Increase this to 10s to give the email service time to connect safely
+      cancelRunningFuture: true
+      # 2. THIS BLOCK: Prevents 400 Bad Requests from triggering the circuit breaker fallback
+      ignoreExceptions:
+         - org.springframework.web.client.HttpClientErrorException$BadRequest
+         - org.springframework.web.reactive.function.client.WebClientResponseException$BadRequest
+         - java.lang.IllegalArgumentException
+   
    configs:
       authentication-service:
-         failureRateThreshold: 50
-         slidingWindowSize: 20
-         minimumNumberOfCalls: 10
-         waitDurationInOpenState: 30
-         permittedNumberOfCallsInHalfOpenState: 10
-         automaticTransitionFromOpenToHalfOpenEnabled: true
-         timeoutDuration: 12 # 1. Increase this to 10s to give the email service time to connect safely
-         cancelRunningFuture: true
-         # 2. THIS BLOCK: Prevents 400 Bad Requests from triggering the circuit breaker fallback
-         ignoreExceptions:
-            - org.springframework.web.client.HttpClientErrorException$BadRequest
-            - org.springframework.web.reactive.function.client.WebClientResponseException$BadRequest
-            - java.lang.IllegalArgumentException
+         timeoutDuration: 15  # only override if different
+    
+      notification-service:
+         # uses default configuration
+      
+      booking-service:
+         # uses default configuration
+         
