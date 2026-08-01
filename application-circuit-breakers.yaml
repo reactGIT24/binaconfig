@@ -19,8 +19,8 @@ circuit-breakers:
          timeoutDuration: 15  # only override if different
     
       notification-service:
-         # uses default configuration
+      # uses default configuration
       
-      booking-service:
-         # uses default configuration
+      redis-service:
+      # uses default configuration
          
