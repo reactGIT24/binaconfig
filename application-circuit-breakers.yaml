@@ -1,5 +1,5 @@
 circuit-breakers:
-   default:
+   default-configs:
       failureRateThreshold: 50
       slidingWindowSize: 20
       minimumNumberOfCalls: 10
