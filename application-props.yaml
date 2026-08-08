@@ -54,7 +54,7 @@ app:
       duration: 24h
       bearer: Bearer 
       authorization: Authorization
-      ttl: 86400000  # one day time to live
+      ttl: 24  # 24 hour time to live
 
    cookies: #------------ Cookies Settings -----------
       httponly: false
