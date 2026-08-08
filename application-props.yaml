@@ -50,7 +50,7 @@ app:
 
    jwt: #------------ JWT Settings -----------
       token: Token
-      jwtsecret: A+APMho:wjx:wJhN0ywLMVIiYc5orY<oF{K0ru+}.Bb
+      jwtsecret: fkBtVXGIqpUfQn4yXvQ9qAHkuhSr2jb8wQr9+CV9Z80=
       duration: 24h
       bearer: Bearer 
       authorization: Authorization
