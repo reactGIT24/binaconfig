@@ -33,8 +33,8 @@ app:
       notification: lb://NOTIFICATION-SERVICE
       redis: lb://REDIS-SERVICE
       operation: lb://OPERATION-SERVICE
-      inventory: lb://INVENTORY-SERVICE
-            
+      account: lb://ACCOUNT-SERVICE
+      scheduler: lb://SCEDULAR-SERVICE      
 
    servicename:  #------------------ Sevice name -----------------
       authentication: authentication-service
@@ -42,7 +42,7 @@ app:
       notification: notification-service
       redis: redis-service
       operation: operation-service
-      inventory: inventory-Service
+      account: inventory-Service
 
    
    serviceuri: #--------- Services URI --------------------
