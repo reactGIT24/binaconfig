@@ -29,25 +29,29 @@ app:
    
    loadbalance:  #---------------- Loadbalance -------------------
       authentication: lb://AUTHENTICATION-SERVICE
+      administration: lb://ADMINISTRATION-SERVICE 
+      notification: lb://NOTIFICATION-SERVICE
       operation: lb://OPERATION-SERVICE
       inventory: lb://INVENTORY-SERVICE
       redis: lb://REDIS-SERVICE
-      notification: lb://NOTIFICATION-SERVICE
+      
 
    servicename:  #------------------ Sevice name -----------------
       authentication: authentication-service
+      administration: administration-service
+      notification: notification-service
       operation: operation-service
       inventory: inventory-Service
-      redis: redis-service
-      notification: notification-service
+      redis: redis-service      
 
    serviceuri: #--------- Services URI --------------------
       authentication: http://authentication-service
+      administration: http://administration-service
+      notification: http://notification-service
       operation: http://operation-service
       inventory: http://inventory-service
       redis: http://redis-service
-      notification: http://notification-service
-
+     
    jwt: #------------ JWT Settings -----------
       token: Token
       jwtsecret: fkBtVXGIqpUfQn4yXvQ9qAHkuhSr2jb8wQr9+CV9Z80=
@@ -83,10 +87,12 @@ app:
    logs: # ---- writting logs ---------------
       apigateway: true
       authentication: true
+      administration: true
+      notification: true
       redis: true
       operation: true
       inventory: true
-      notification: true
+      
        
    webclient: # ----- Web Client Config  --------------------
       max-connections: 10000
