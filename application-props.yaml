@@ -31,27 +31,28 @@ app:
       authentication: lb://AUTHENTICATION-SERVICE
       administration: lb://ADMINISTRATION-SERVICE 
       notification: lb://NOTIFICATION-SERVICE
-      redis: lb://REDIS-SERVICE
       operation: lb://OPERATION-SERVICE
       account: lb://ACCOUNT-SERVICE
+      redis: lb://REDIS-SERVICE
       scheduler: lb://SCEDULAR-SERVICE      
 
    servicename:  #------------------ Sevice name -----------------
       authentication: authentication-service
       administration: administration-service
       notification: notification-service
-      redis: redis-service
       operation: operation-service
-      account: inventory-Service
-
+      account: account-Service
+      redis: redis-service
+      schedular: schedular-service
    
    serviceuri: #--------- Services URI --------------------
       authentication: http://authentication-service
       administration: http://administration-service
       notification: http://notification-service
-      redis: http://redis-service
       operation: http://operation-service
-      inventory: http://inventory-service
+      account: http://account-service
+      redis: http://redis-service
+      schedular: http://schedular-service
            
    jwt: #------------ JWT Settings -----------
       token: Token
@@ -90,10 +91,10 @@ app:
       authentication: true
       administration: true
       notification: true
-      redis: true
       operation: true
-      inventory: true
-      
+      account: true
+      redis: true
+      schedular: true      
        
    webclient: # ----- Web Client Config  --------------------
       max-connections: 10000
