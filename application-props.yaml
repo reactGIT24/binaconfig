@@ -58,7 +58,7 @@ app:
       token: Token
       jwtsecret: fkBtVXGIqpUfQn4yXvQ9qAHkuhSr2jb8wQr9+CV9Z80=
       duration: 24h
-      bearer: Bearer 
+      bearer: Bearer
       authorization: Authorization
       ttl: 24  # 24 hour time to live
 
