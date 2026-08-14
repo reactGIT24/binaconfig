@@ -5,7 +5,7 @@ server:
     session: 
       persistent: false
   http2:
-    enabled: true
+    enabled: false
   compression:
     enabled: true
     mime-types:
@@ -27,8 +27,8 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true
-          lower-case-service-id: true
+          enabled: false
+          #lower-case-service-id: true
       httpclient:
         connect-timeout: 600000    
         response-timeout: 600s # 180s for long polls                
