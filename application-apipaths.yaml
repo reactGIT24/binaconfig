@@ -1,1 +1,25 @@
-
+api:
+   #------------------ Authentication -----------------
+   authentication:   
+      version: /api/v1
+      auth: /auth
+      signup: "${api.version}${api.auth}: /signup"
+      signin: "${api.version}${api.auth}/signin"
+	    signout: "${api.version}${api.auth}/signout"
+      verify-email: "${api.version}${api.auth}/verify-email"
+      forgot-password: "${api.version}${api.auth}/forgot-password"
+      reset-password: "${api.version}${api.auth}/reset-password"
+      resend-verification: "${api.version}${api.auth}/resend-verification
+	    
+	    
+	    /* ------------------ Admin Authentication ----------------- */
+	    public static final String ADMIN_AUTH = API_V1 + "/admin/auth";
+	    public static final String ADMIN_SIGNUP = "/signup";
+	    
+	    
+	    
+	    /* ------------------ Task Authentication ----------------- */
+	    public static final String TASK_AUTH = API_V1 + "/task/auth";
+	    public static final String FIND_USERID = "/find-userId";
+	    public static final String DELETE_UNVERIFIED_ACCOUNTS = "/delete-unverified-accounts";
+}
