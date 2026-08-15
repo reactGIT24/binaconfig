@@ -17,6 +17,5 @@ api:
 	  
 	  #----------- Black list ------------
 	  blacklist: "${api.paths.version}/blacklist"
-       add-jwt: /add-jwt
-	   find-jwt: /find-jwt
-
+      add-jwt: /add-jwt
+	  find-jwt: /find-jwt
