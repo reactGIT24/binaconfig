@@ -12,11 +12,11 @@ api:
       reset-password: /reset-password
       resend-verification: /resend-verification
 
-    auth-admin:
+    adminauth:
       base: ${api.paths.version}/admin/auth
       delete-unverified-accounts: /delete-unverified-accounts
       
-    custom-auth:
+    customauth:
       base: ${api.paths.version}/custom/auth
       find-user: /find-userId
     #------------------ Blacklist ------------------
