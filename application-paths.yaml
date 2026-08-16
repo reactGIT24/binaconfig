@@ -25,3 +25,14 @@ api:
       base: ${api.paths.version}/blacklist
       add-jwt: /add-jwt
       find-jwt: /find-jwt
+      
+    #------------------ Notification ------------------
+    notification:
+      base:  ${api.paths.version}/notification
+      confirm-registration: /confirm-registration
+      reset-password: /reset-password
+      passwordchanged: /passwordchanged
+      temporary-password: /temporary-password
+      
+      
+   
