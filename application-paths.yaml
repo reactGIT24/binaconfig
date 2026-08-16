@@ -28,7 +28,7 @@ api:
       
     #------------------ Notification ------------------
     notification:
-      base:  ${api.paths.version}/notification
+      base: ${api.paths.version}/notification
       confirm-registration: /confirm-registration
       reset-password: /reset-password
       passwordchanged: /passwordchanged
