@@ -24,6 +24,7 @@ api:
       base: ${api.paths.version}/blacklist
       add-jwt: /add-jwt
       find-jwt: /find-jwt
+      delete-all-jwt: /delete-all-jwt
       
     #------------------ Notification ------------------
     notification:
