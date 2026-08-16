@@ -15,11 +15,10 @@ api:
     auth-admin:
       base: ${api.paths.version}/admin/auth
       delete-unverified-accounts: /delete-unverified-accounts
-      find-user: /find-userId
-
+      
     custom-auth:
       base: ${api.paths.version}/custom/auth
-
+      find-user: /find-userId
     #------------------ Blacklist ------------------
     blacklist:
       base: ${api.paths.version}/blacklist
