@@ -97,16 +97,16 @@ app:
     schedular: true      
        
   webclient: # ----- Web Client Config  --------------------
-    max-connections: 10000
-    pending-acquiremaxcount: 1000
-    max-idletime: 30
-    max-lifetime: 100
-    connect-timeout: 600000
-    response-timeout: 180000
-    retry-backoffmaxattempts: 3
-    min-backoff: 100
-    read-timeouthandler: 30
-    write-timeouthandler: 30
+    max-connections: 1000
+    pending-acquire-max-count: 1000
+    max-idle-time: 30s
+    max-lifetime: 100s
+    connect-timeout: 6000
+    response-timeout: 180s
+    retry-backoff-max-attempts: 3
+    min-backoff: 100ms
+    read-timeout-handler: 30
+    write-timeout-handler: 30
 
   confirmationtoken: #-----Confirmation Token----- 
     verify-email: Verify Email
