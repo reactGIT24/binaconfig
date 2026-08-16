@@ -1,7 +1,7 @@
 api:
   paths:
     version: /api/v1
-    # ------------------ Authentication ------------------
+    #------------------ Authentication ------------------
     auth:
       base: ${api.paths.version}/auth
       signup: /signup
