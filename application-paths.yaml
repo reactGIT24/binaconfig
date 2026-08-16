@@ -27,6 +27,11 @@ api:
       find-jwt: /find-jwt
       delete-all-jwt: /delete-all-jwt
       
+    #----------------- Administration -----------------
+    administration:
+      base: ${api.paths.version}/administration
+      categories: /management/categories
+      specifications: /management/specification
     #------------------ Notification ------------------
     notification:
       base: ${api.paths.version}/notification
