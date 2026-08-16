@@ -1,14 +1,14 @@
 #---------------- Server --------------------  
 server:
-   port: 8084
-   servlet: 
-      session: 
-         persistent: false
-      encoding:
-         charset: UTF-8
-         force: true
-      http2:
-         enabled: true	
+  port: 8084
+  servlet: 
+    session: 
+      persistent: false
+    encoding:
+      charset: UTF-8
+      force: true
+    http2:
+      enabled: true	
 # for production   logging.level.root=INFO
 
 #----------------- Database --------------------
@@ -43,14 +43,14 @@ spring:
       platform: mysql
 #--------------------------------------------------------
 app:
-   redisconfig:
-      status: UP
-      session-timeout: 1800 # 30 min
-      key-splitor: _
-      jwtblacklist-prefix: jwtblacklist
-      category-prefix: category
-      category-key: cpbzcategory
-      jwtblaklist-key: cpjwtblacklist
-      env-Id: 100 # development
-      # env-Id: 200 uat
-      # env-Id: 300 #  production
+  redisconfig:
+    status: UP
+    session-timeout: 1800 # 30 min
+    key-splitor: _
+    jwtblacklist-prefix: jwtblacklist
+    category-prefix: category
+    category-key: cpbzcategory
+    jwtblaklist-key: cpjwtblacklist
+    env-Id: 100 # development
+    # env-Id: 200 uat
+    # env-Id: 300 #  production
