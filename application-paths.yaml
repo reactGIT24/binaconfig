@@ -1,21 +1,21 @@
 api:
    paths:
       version: /api/v1
-	  #------------------ Authentication -----------------
-      auth: "${api.paths.version}/auth"
-	  admin-auth: "${api.paths.version}/admin/auth"
-	  custom-auth: "${api.paths.version}/custom/auth"
-	  signup: /signup
-      signin: /signin
-	  signout: /signout
-      verify-email: /verify-email
-      forgot-password: /forgot-password
-      reset-password: /reset-password
-      resend-verification: /resend-verification
-	  delete-unverified-accounts: /delete-unverified-accounts
-	  find-user: /find-userId
+	  
+	  auth: "${api.paths.version}/auth" #------------------ Authentication -----------------
+	     admin-auth: "${api.paths.version}/admin/auth"
+	     custom-auth: "${api.paths.version}/custom/auth"
+	     signup: /signup
+         signin: /signin
+	     signout: /signout
+         verify-email: /verify-email
+         forgot-password: /forgot-password
+         reset-password: /reset-password
+         resend-verification: /resend-verification
+	     delete-unverified-accounts: /delete-unverified-accounts
+	     find-user: /find-userId
 	  
 	  #----------- Black list ------------
 	  blacklist: "${api.paths.version}/blacklist"
-      add-jwt: /add-jwt
-	  find-jwt: /find-jwt
+         add-jwt: /add-jwt
+	     find-jwt: /find-jwt
