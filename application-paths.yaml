@@ -12,7 +12,7 @@ api:
       reset-password: /reset-password
       resend-verification: /resend-verification
 
-    adminauth:
+    admin-auth:
       base: ${api.paths.version}/admin/auth
       signup: /signup
       delete-unverified-accounts: /delete-unverified-accounts
