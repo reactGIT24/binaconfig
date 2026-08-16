@@ -3,7 +3,7 @@ api:
       version: /api/v1
 	  
 	  auth:  #------------------ Authentication -----------------
-	     base: "${api.paths.version}/auth"
+	     base: ${api.paths.version}/auth
 		 signup: /signup
          signin: /signin
 	     signout: /signout
@@ -12,14 +12,14 @@ api:
          reset-password: /reset-password
          resend-verification: /resend-verification
 	     
-	  admin-base: "${api.paths.version}/admin/auth"
+	  admin-base: ${api.paths.version}/admin/auth
 	     delete-unverified-accounts: /delete-unverified-accounts
 	     find-user: /find-userId
 		 
-      custom-base: "${api.paths.version}/custom/auth"	  
+      custom-base: ${api.paths.version}/custom/auth	  
 	 
 	  blacklist:  #----------- Black list ------------
-	     base: "${api.paths.version}/blacklist"
+	     base: ${api.paths.version}/blacklist
          add-jwt: /add-jwt
 	     find-jwt: /find-jwt
 		 
