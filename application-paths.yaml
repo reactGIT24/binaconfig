@@ -31,7 +31,28 @@ api:
     administration:
       base: ${api.paths.version}/administration
       categories: /categories
+      add-categories: /add-categories
+      add-subcategories: /add-subcategories
+      add-products: /add-products
+      update-categories: /update-categories
+      update-subcategories: /update-subcategories
+      update-products: /update-products
+      
+      
+      
       specifications: /specification
+
+      #----------------- Operationtion -----------------
+      operation:
+      base: ${api.paths.version}/secure/operation
+      categories: /categories
+      add-categories: /add-categories
+      add-subcategories: /add-subcategories
+      add-products: /add-products
+      update-categories: /update-categories
+      update-subcategories: /update-subcategories
+      update-products: /update-products
+      
     #------------------ Notification ------------------
     notification:
       base: ${api.paths.version}/notification
