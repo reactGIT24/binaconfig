@@ -20,7 +20,7 @@ api:
     custom:
       base: ${api.paths.version}/custom/auth
 
-    # ------------------ Blacklist ------------------
+    #------------------ Blacklist ------------------
     blacklist:
       base: ${api.paths.version}/blacklist
       add-jwt: /add-jwt
