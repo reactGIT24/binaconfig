@@ -17,7 +17,7 @@ api:
       delete-unverified-accounts: /delete-unverified-accounts
       find-user: /find-userId
 
-    custom:
+    custom-auth:
       base: ${api.paths.version}/custom/auth
 
     #------------------ Blacklist ------------------
