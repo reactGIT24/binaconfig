@@ -1,14 +1,14 @@
 #---------------- Server --------------------  
 server:
-   port: 8085
-   servlet: 
-      session: 
-         persistent: false
-      encoding:
-         charset: UTF-8
-         force: true
-      http2:
-         enabled: true	
+  port: 8085
+  servlet: 
+    session: 
+      persistent: false
+    encoding:
+      charset: UTF-8
+      force: true
+    http2:
+      enabled: true	
 # for production   logging.level.root=INFO
 
 #----------------- Database --------------------
