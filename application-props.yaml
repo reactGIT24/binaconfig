@@ -1,116 +1,116 @@
 #----------------- Custom properties -------------------------
 app:
-   auth-security:
-      user-accounts-query: select email, password, active from user where email=?
-      roles-query: select u.email, r.name from user u inner join user_role ur on (u.userId = ur.userId) inner join role r on (ur.roleId=r.roleId) where u.email=?
-      expired-session-url: /auth/signin  
+  auth-security:
+    user-accounts-query: select email, password, active from user where email=?
+    roles-query: select u.email, r.name from user u inner join user_role ur on (u.userId = ur.userId) inner join role r on (ur.roleId=r.roleId) where u.email=?
+    expired-session-url: /auth/signin  
       
-   cors: #---------------- CORS ----------------------
-      origins: 
-         - http://localhost:5173   #local
-      #origins: 
-         #- https://xxxxxxx     #production
-      methods:
-         - POST
-         - PUT
-         - GET
-         - OPTIONS
-         - DELETE
-         - PATCH
-      headers:
-         - Authorization
-         - Content-Type
-         - Accept
-      max-age: 10  #Set to 10 seconds during development
-      # max-age: 3600  # Production: 1 hour   
+  cors: #---------------- CORS ----------------------
+    origins: 
+      - http://localhost:5173   #local
+    #origins: 
+      #- https://xxxxxxx     #production
+    methods:
+      - POST
+      - PUT
+      - GET
+      - OPTIONS
+      - DELETE
+      - PATCH
+    headers:
+      - Authorization
+      - Content-Type
+      - Accept
+    max-age: 10  #Set to 10 seconds during development
+    # max-age: 3600  # Production: 1 hour   
    
-   validation: #---------------- validation ----------------------
-      fullname-maxlength: 60
+  validation: #---------------- validation ----------------------
+    fullname-maxlength: 60
    
-   loadbalance:  #---------------- Loadbalance -------------------
-      authentication: lb://AUTHENTICATION-SERVICE
-      administration: lb://ADMINISTRATION-SERVICE 
-      notification: lb://NOTIFICATION-SERVICE
-      operation: lb://OPERATION-SERVICE
-      account: lb://ACCOUNT-SERVICE
-      redis: lb://REDIS-SERVICE
-      scheduler: lb://SCEDULAR-SERVICE      
+  loadbalance:  #---------------- Loadbalance -------------------
+    authentication: lb://AUTHENTICATION-SERVICE
+    administration: lb://ADMINISTRATION-SERVICE 
+    notification: lb://NOTIFICATION-SERVICE
+    operation: lb://OPERATION-SERVICE
+    account: lb://ACCOUNT-SERVICE
+    redis: lb://REDIS-SERVICE
+    scheduler: lb://SCEDULAR-SERVICE      
 
-   servicename:  #------------------ Sevice name -----------------
-      authentication: authentication-service
-      administration: administration-service
-      notification: notification-service
-      operation: operation-service
-      account: account-Service
-      redis: redis-service
-      schedular: schedular-service
+  servicename:  #------------------ Sevice name -----------------
+    authentication: authentication-service
+    administration: administration-service
+    notification: notification-service
+    operation: operation-service
+    account: account-Service
+    redis: redis-service
+    schedular: schedular-service
    
-   serviceuri: #--------- Services URI --------------------
-      authentication: http://authentication-service
-      administration: http://administration-service
-      notification: http://notification-service
-      operation: http://operation-service
-      account: http://account-service
-      redis: http://redis-service
-      schedular: http://schedular-service
+  serviceuri: #--------- Services URI --------------------
+    authentication: http://authentication-service
+    administration: http://administration-service
+    notification: http://notification-service
+    operation: http://operation-service
+    account: http://account-service
+    redis: http://redis-service
+    schedular: http://schedular-service
            
-   jwt: #------------ JWT Settings -----------
-      token: Token
-      jwtsecret: fkBtVXGIqpUfQn4yXvQ9qAHkuhSr2jb8wQr9+CV9Z80=
-      duration: 24h
-      bearer: Bearer
-      authorization: Authorization
-      ttl: 24  # 24 hour time to live
+  jwt: #------------ JWT Settings -----------
+    token: Token
+    jwtsecret: fkBtVXGIqpUfQn4yXvQ9qAHkuhSr2jb8wQr9+CV9Z80=
+    duration: 24h
+    bearer: Bearer
+    authorization: Authorization
+    ttl: 24  # 24 hour time to live
 
-   cookies: #------------ Cookies Settings -----------
-      httponly: false
-      path: /
-      max-age: 86400
-      samesite: Lax
-      #---- uat -------
-      secure: false
-      domain: localhost # localhost
-      weburl: https://localhost:8080
-      # ---- production
-      #domain: my domain
-      #secure: true
-      #weburl: https://my domain
+  cookies: #------------ Cookies Settings -----------
+    httponly: false
+    path: /
+    max-age: 86400
+    samesite: Lax
+    #---- uat -------
+    secure: false
+    domain: localhost # localhost
+    weburl: https://localhost:8080
+    # ---- production
+    #domain: my domain
+    #secure: true
+    #weburl: https://my domain
 
-   language: #----- Supported Languages --------
-      en: en
-      ar: ar
-      def: en
-      accept-lang: Accept-Language
+  language: #----- Supported Languages --------
+    en: en
+    ar: ar
+    def: en
+    accept-lang: Accept-Language
 
-   currency: #--------- Default currency#-----------------
-      ar: درهم
-      en: AED   
+  currency: #--------- Default currency#-----------------
+    ar: درهم
+    en: AED   
    
-   logs: # ---- writting logs ---------------
-      apigateway: true
-      authentication: true
-      administration: true
-      notification: true
-      operation: true
-      account: true
-      redis: true
-      schedular: true      
+  logs: # ---- writting logs ---------------
+    apigateway: true
+    authentication: true
+    administration: true
+    notification: true
+    operation: true
+    account: true
+    redis: true
+    schedular: true      
        
-   webclient: # ----- Web Client Config  --------------------
-      max-connections: 10000
-      pending-acquiremaxcount: 1000
-      max-idletime: 30
-      max-lifetime: 100
-      connect-timeout: 600000
-      response-timeout: 180000
-      retry-backoffmaxattempts: 3
-      min-backoff: 100
-      read-timeouthandler: 30
-      write-timeouthandler: 30
+  webclient: # ----- Web Client Config  --------------------
+    max-connections: 10000
+    pending-acquiremaxcount: 1000
+    max-idletime: 30
+    max-lifetime: 100
+    connect-timeout: 600000
+    response-timeout: 180000
+    retry-backoffmaxattempts: 3
+    min-backoff: 100
+    read-timeouthandler: 30
+    write-timeouthandler: 30
 
-   confirmationtoken: #-----Confirmation Token----- 
-       verify-email: Verify Email
-       reset-password: Reset Password
+  confirmationtoken: #-----Confirmation Token----- 
+    verify-email: Verify Email
+    reset-password: Reset Password
 
-   messages: #---------- Messages configuration properties -----------------  
-      base-url: https://raw.githubusercontent.com/reactGIT24/binaconfig/main/messages/messages
+  messages: #---------- Messages configuration properties -----------------  
+    base-url: https://raw.githubusercontent.com/reactGIT24/binaconfig/main/messages/messages
