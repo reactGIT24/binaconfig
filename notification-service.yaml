@@ -1,60 +1,58 @@
 #---------------- Server --------------------  
 server:
-   port: 8082
-   servlet: 
-      session: 
-         persistent: false
-      encoding:
-         charset: UTF-8
-         force: true
-      http2:
-         enabled: true	
+  port: 8082
+  servlet: 
+    session: 
+      persistent: false
+    encoding:
+      charset: UTF-8
+      force: true
+    http2:
+      enabled: true	
 # for production   logging.level.root=INFO
 
 #--------------------------------------------------------
 # Email configuration  ===> ports can be used 25,587,8025
 #--------------------------------------------------------
 mail:
-   debug: false
-   trace: false
-   host: smtp.gmail.com
-   username: comimad@gmail.com
-   password: xfqsvsbckocpuqjm
-   port: 587 
-   default-encoding: UTF-8
-   protocol: smtp       
-   smtp:
-      starttls: 
-         enable: true
-      auth: true
-      ssl: 
-         enable: false
-   transport: 
-      protocol: smtp
-   smtps: 
-        timeout: 8000
-   template:
-      confirm-reg: confirm-registration
-      change-pwd: change-password
-      reset-pwd: reset-password
-      temp-pwd: temporary-password
-      forgot-pwd: forgot-password
-      comminicationmessage: 20
-      invoicereminder: 50      
-      generateinvoice: 70
+  debug: false
+  trace: false
+  host: smtp.gmail.com
+  username: comimad@gmail.com
+  password: xfqsvsbckocpuqjm
+  port: 587 
+  default-encoding: UTF-8
+  protocol: smtp       
+  smtp:
+    starttls: 
+      enable: true
+    auth: true
+    ssl: 
+      enable: false
+  transport: 
+    protocol: smtp
+  smtps: 
+    timeout: 8000
+  template:
+    confirm-reg: confirm-registration
+    change-pwd: change-password
+    reset-pwd: reset-password
+    temp-pwd: temporary-password
+    forgot-pwd: forgot-password
+    comminicationmessage: 20
+    invoicereminder: 50      
+    generateinvoice: 70
          
-   url:
-      confirm-reg: /confirm-registration
-      reset-pwd: /resetpassword
-      accountverification: /accountverification
-      login: /signin
-      payinvoice: /payinvoice     
+  url:
+    confirm-reg: /confirm-registration
+    reset-pwd: /resetpassword
+    accountverification: /accountverification
+    login: /signin
+    payinvoice: /payinvoice     
    
-   business:
-      name-en: Bina24
-      name-ar: بناء 24
-      support-email: support@bina24.net
-      web-url: http://localhost:5173 # development
-      #web-url: http://www.bina24.net # production
-      
-
+  business:
+    name-en: Bina24
+    name-ar: بناء 24
+    support-email: support@bina24.net
+    web-url: http://localhost:5173 # development
+    #web-url: http://www.bina24.net # production
