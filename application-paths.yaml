@@ -10,13 +10,11 @@ api:
          verify-email: /verify-email
          forgot-password: /forgot-password
          reset-password: /reset-password
-         resend-verification: /resend-verification
-	     
+         resend-verification: /resend-verification	     
 	  admin:
 	     base: ${api.paths.version}/admin/auth
 	     delete-unverified-accounts: /delete-unverified-accounts
-	     find-user: /find-userId
-		 
+	     find-user: /find-userId		 
       custom: 
 	     base: ${api.paths.version}/custom/auth	  
 
