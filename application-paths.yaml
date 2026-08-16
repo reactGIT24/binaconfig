@@ -30,8 +30,8 @@ api:
     #----------------- Administration -----------------
     administration:
       base: ${api.paths.version}/administration
-      categories: /management/categories
-      specifications: /management/specification
+      categories: /categories
+      specifications: /specification
     #------------------ Notification ------------------
     notification:
       base: ${api.paths.version}/notification
