@@ -1,7 +1,6 @@
 api:
   paths:
     version: /api/v1
-
     # ------------------ Authentication ------------------
     auth:
       base: ${api.paths.version}/auth
