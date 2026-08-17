@@ -28,23 +28,14 @@ api:
       delete-all-jwt: /delete-all-jwt
       
     #----------------- Administration -----------------
-    administration:
-      base: ${api.paths.version}/administration
-      categories: /categories
-      add-categories: /add-categories
-      add-subcategories: /add-subcategories
-      add-products: /add-products
-      update-categories: /update-categories
-      update-subcategories: /update-subcategories
-      update-products: /update-products
-      
+         
       
       
       specifications: /specification
 
       #----------------- Operationtion -----------------
-      operation:
-      base: ${api.paths.version}/secure/operation
+      admin-operation:
+      base: ${api.paths.version}/admin/operation
       categories: /categories
       add-categories: /add-categories
       add-subcategories: /add-subcategories
@@ -52,6 +43,14 @@ api:
       update-categories: /update-categories
       update-subcategories: /update-subcategories
       update-products: /update-products
+      
+      operation:
+      base: ${api.paths.version}/operation
+      categories: /categories
+      add-categories: /find-categories
+      add-subcategories: /find-subcategories
+      add-products: /find-products
+      
       
     #------------------ Notification ------------------
     notification:
