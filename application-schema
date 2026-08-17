@@ -1,1 +1,21 @@
+db:
+  products:  
+    category:
+      data-table: category
+      seq-table: seq_category
+      primary-key: categoryId
 
+    subcategory:
+      data-table: subcategory
+      seq-table: seq_subcategory
+      primary-key: subcategoryId
+
+    product:
+      data-table: product
+      seq-table: seq_product
+      primary-key: productId
+
+    brand:
+      data-table: brand
+      seq-table: seq_brand
+      primary-key: brandId
