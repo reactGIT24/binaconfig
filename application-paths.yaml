@@ -34,8 +34,7 @@ api:
 
     #----------------- Operation -----------------
     admin-operation:
-      base: ${api.paths.version}/admin/operation
-      categories: /categories
+      base-categories: ${api.paths.version}/admin/operation/categories
       add-categories: /add-categories
       add-subcategories: /add-subcategories
       add-products: /add-products
