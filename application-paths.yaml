@@ -1,6 +1,7 @@
 api:
   paths:
     version: /api/v1
+
     #------------------ Authentication ------------------
     auth:
       base: ${api.paths.version}/auth
@@ -16,25 +17,23 @@ api:
       base: ${api.paths.version}/admin/auth
       signup: /signup
       delete-unverified-accounts: /delete-unverified-accounts
-      
+
     custom-auth:
       base: ${api.paths.version}/custom/auth
       find-user: /find-userId
+
     #------------------ Blacklist ------------------
     blacklist:
       base: ${api.paths.version}/blacklist
       add-jwt: /add-jwt
       find-jwt: /find-jwt
       delete-all-jwt: /delete-all-jwt
-      
-    #----------------- Administration -----------------
-         
-      
-      
-      specifications: /specification
 
-      #----------------- Operationtion -----------------
-      admin-operation:
+    #----------------- Administration -----------------
+    specifications: /specification
+
+    #----------------- Operation -----------------
+    admin-operation:
       base: ${api.paths.version}/admin/operation
       categories: /categories
       add-categories: /add-categories
@@ -43,15 +42,14 @@ api:
       update-categories: /update-categories
       update-subcategories: /update-subcategories
       update-products: /update-products
-      
-      operation:
+
+    operation:
       base: ${api.paths.version}/operation
       categories: /categories
       add-categories: /find-categories
       add-subcategories: /find-subcategories
       add-products: /find-products
-      
-      
+
     #------------------ Notification ------------------
     notification:
       base: ${api.paths.version}/notification
@@ -59,6 +57,3 @@ api:
       reset-password: /reset-password
       passwordchanged: /passwordchanged
       temporary-password: /temporary-password
-      
-      
-   
