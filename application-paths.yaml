@@ -42,7 +42,9 @@ api:
       update-categories: /update-categories
       update-subcategories: /update-subcategories
       update-products: /update-products
-
+    
+      specifications: /specifications
+    
     operation:
       base: ${api.paths.version}/operation
       categories: /categories
