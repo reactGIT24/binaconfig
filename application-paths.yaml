@@ -27,15 +27,15 @@ api:
       base: ${api.paths.version}/custom/auth
       find-user: /find-userId
 
-    #------------------ Blacklist ------------------
+    #------------------ REDIS Blacklist ------------------
     blacklist:
       base: ${api.paths.version}/blacklist
       add-jwt: /add-jwt
       find-jwt: /find-jwt
       delete-all-jwt: /delete-all-jwt
-
+      
     #----------------- Administration -----------------
-    specifications: /specification
+    
 
     #----------------- Operation -----------------
     admin-operation:
@@ -47,15 +47,16 @@ api:
       update-subcategories: /update-subcategories
       update-products: /update-products
     
-      specifications: /specifications
-    
-    operation:
-      base: ${api.paths.version}/operation
+      base-specifications: ${api.paths.version}/admin/operation/specifications
+     
+    public-operation:
+      base: ${api.paths.public.base}/operation
       categories: /categories
       add-categories: /find-categories
       add-subcategories: /find-subcategories
       add-products: /find-products
 
+    #------------------ REDIS ------------------
     #------------------ Notification ------------------
     notification:
       base: ${api.paths.version}/notification
