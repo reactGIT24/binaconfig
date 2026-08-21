@@ -33,6 +33,9 @@ api:
       add-jwt: /add-jwt
       find-jwt: /find-jwt
       delete-all-jwt: /delete-all-jwt
+
+    cache-update-categories:  ${api.paths.version}/update/cache-categories
+    cache-update-specifications:  ${api.paths.version}/update/cache-specifications
       
     #----------------- Administration -----------------
     
