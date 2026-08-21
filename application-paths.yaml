@@ -3,11 +3,6 @@ api:
     version: /api/v1
 
     #------------------ Authentication ------------------
-    public:
-      base: ${api.paths.version}/public
-      categories: /operation/categories
-      specifications: /operation/specifications
-      
     auth:
       base: ${api.paths.version}/auth
       signup: /signup
@@ -27,15 +22,15 @@ api:
       base: ${api.paths.version}/custom/auth
       find-user: /find-userId
 
-    #------------------ REDIS Blacklist ------------------
+    #------------------ REDIS ------------------
     blacklist:
       base: ${api.paths.version}/blacklist
       add-jwt: /add-jwt
       find-jwt: /find-jwt
       delete-all-jwt: /delete-all-jwt
 
-    cache-update-categories:  ${api.paths.version}/update/cache-categories
-    cache-update-specifications:  ${api.paths.version}/update/cache-specifications
+    update-cache-categories:  ${api.paths.version}/cache/categories
+    update-cache-specifications:  ${api.paths.version}/cache/specifications
       
     #----------------- Administration -----------------
     
@@ -51,7 +46,11 @@ api:
       update-products: /update-products
     
       base-specifications: ${api.paths.version}/admin/operation/specifications
-     
+
+    #----------------- Public paths ----------------- 
+    public:
+      base: ${api.paths.version}/public
+            
     public-operation:
       base: ${api.paths.public.base}/operation
       categories: /categories
@@ -59,7 +58,8 @@ api:
       add-subcategories: /find-subcategories
       add-products: /find-products
 
-    #------------------ REDIS ------------------
+      specifications: /specifications
+  
     #------------------ Notification ------------------
     notification:
       base: ${api.paths.version}/notification
