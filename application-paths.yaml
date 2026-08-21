@@ -5,6 +5,8 @@ api:
     #------------------ Authentication ------------------
     public:
       base: ${api.paths.version}/public
+      categories: /operation/categories
+      specifications: /operation/specifications
       
     auth:
       base: ${api.paths.version}/auth
