@@ -3,6 +3,9 @@ api:
     version: /api/v1
 
     #------------------ Authentication ------------------
+    public:
+      base: ${api.paths.version}/public
+      
     auth:
       base: ${api.paths.version}/auth
       signup: /signup
