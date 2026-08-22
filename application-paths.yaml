@@ -31,13 +31,12 @@ api:
     
     cache:
       secure: 
+        base: ${api.paths.version}/cache/secure
         categories: 
-          base: ${api.paths.version}/cache/secure/categories
-          update: /update
+          update: /categories/update
       
         specifications:
-          base: ${api.paths.version}/cache/secure/specifications
-          update: /update
+          update: /specifications/update
          
 
         
