@@ -34,8 +34,10 @@ api:
       update-categories: /update-categories
       
     
-    update-cache-specifications:  ${api.paths.version}/cache/specifications
-      
+      base-specifications:  ${api.paths.version}/cache/cache/specifications
+        update-specifications: /update-specifications
+
+        
     #----------------- Administration -----------------
     
 
