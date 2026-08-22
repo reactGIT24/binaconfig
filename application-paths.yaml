@@ -31,11 +31,11 @@ api:
 
     secure-cache:
       base-categories: ${api.paths.version}/secure/cache/categories
-      update-categories: /update-categories
+      update-categories: /update
       
     
       base-specifications:  ${api.paths.version}/cache/cache/specifications
-        update-specifications: /update-specifications
+        update: /update
 
         
     #----------------- Administration -----------------
