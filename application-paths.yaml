@@ -30,12 +30,13 @@ api:
       delete-all-jwt: /delete-all-jwt
 
     secure-cache:
-      base-categories: ${api.paths.version}/secure/cache/categories
-      update-categories: /update
-      
-    
-      base-specifications:  ${api.paths.version}/cache/cache/specifications
+      categories: 
+        base: ${api.paths.version}/secure/cache/categories
         update: /update
+      
+      specifications:
+        base: ${api.paths.version}/secure/cache/specifications
+        pdate: /update
 
         
     #----------------- Administration -----------------
