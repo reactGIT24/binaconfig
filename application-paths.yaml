@@ -33,11 +33,11 @@ api:
       secure: 
         categories: 
           base: ${api.paths.version}/cache/secure/categories
-          update: ${api.paths.version}/cache/secure/categories/update
+          update: /update
       
         specifications:
           base: ${api.paths.version}/cache/secure/specifications
-          update: ${api.paths.version}/cache/secure/specifications/update
+          update: /update
          
 
         
