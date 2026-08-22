@@ -34,10 +34,12 @@ api:
         categories: 
           base: ${api.paths.version}/cache/secure/categories
           update: /update
+           full-update-path: ${api.paths.cache.secure.categories.base}/update
       
         specifications:
           base: ${api.paths.version}/cache/secure/specifications
           pdate: /update
+         
 
         
     #----------------- Administration -----------------
