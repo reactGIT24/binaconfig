@@ -29,7 +29,11 @@ api:
       find-jwt: /find-jwt
       delete-all-jwt: /delete-all-jwt
 
-    update-cache-categories:  ${api.paths.version}/cache/categories
+    secure-cache:
+      base-categories: ${api.paths.version}/secure/cache/categories
+      update-categories: /update-categories
+      
+    
     update-cache-specifications:  ${api.paths.version}/cache/specifications
       
     #----------------- Administration -----------------
@@ -41,9 +45,11 @@ api:
       add-categories: /add-categories
       add-subcategories: /add-subcategories
       add-products: /add-products
+      add-brands: /add-brands
       update-categories: /update-categories
       update-subcategories: /update-subcategories
       update-products: /update-products
+      update-brands: /update-products
     
       base-specifications: ${api.paths.version}/admin/operation/specifications
 
