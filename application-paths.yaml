@@ -31,7 +31,7 @@ api:
     
     cache:
       secure:
-        base: /api/v1/cache/secure
+        base: ${api.paths.version}/cache/secure
         categories:
           update: /categories/update
         
