@@ -28,15 +28,16 @@ api:
       add-jwt: /add-jwt
       find-jwt: /find-jwt
       delete-all-jwt: /delete-all-jwt
-
-    secure-cache:
-      categories: 
-        base: ${api.paths.version}/secure/cache/categories
-        update: /update
+    
+    cache:
+      secure: 
+        categories: 
+          base: ${api.paths.version}/cache/secure/categories
+          update: /update
       
-      specifications:
-        base: ${api.paths.version}/secure/cache/specifications
-        pdate: /update
+        specifications:
+          base: ${api.paths.version}/cache/secure/specifications
+          pdate: /update
 
         
     #----------------- Administration -----------------
